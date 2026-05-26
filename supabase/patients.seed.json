@@ -1,0 +1,194 @@
+[
+  {
+    "patient_code": "PATIENT_1",
+    "case_label": "Failing Metformin",
+    "age": 48,
+    "sex": "Male",
+    "bmi": 31.1,
+    "conditions": ["T2DM", "HTN"],
+    "medications": [
+      {"name": "Metformin", "dose": "1g BD"},
+      {"name": "Telmisartan", "dose": "40mg OD"}
+    ],
+    "allergy": "Sulfonamide (rash)",
+    "labs": {
+      "HbA1c": 8.4,
+      "FBS": 168,
+      "Cr": 0.9,
+      "eGFR": 92,
+      "TC": 220,
+      "LDL": 142,
+      "HDL": 38,
+      "TG": 280
+    },
+    "vitals": {
+      "BP": "134/86",
+      "HR": 78
+    },
+    "insurance": {
+      "provider": "Star Health Gold",
+      "coverage": "generic covered, branded need pre-auth",
+      "monthly_cap": "₹5K"
+    },
+    "income": "Middle-class salaried",
+    "notes": "Second-line diabetes decision with insurance cap and sulfonamide allergy"
+  },
+  {
+    "patient_code": "PATIENT_2",
+    "case_label": "Complex with CKD",
+    "age": 62,
+    "sex": "Female",
+    "bmi": 27.2,
+    "conditions": ["T2DM", "CKD 3b", "HTN", "Proliferative Retinopathy", "Neuropathy"],
+    "medications": [
+      {"name": "Metformin", "dose": "500mg BD"},
+      {"name": "Glimepiride", "dose": "2mg OD"},
+      {"name": "Atorvastatin", "dose": "20mg HS"},
+      {"name": "Telmisartan", "dose": "80mg OD"},
+      {"name": "Aspirin", "dose": "75mg OD"},
+      {"name": "Pregabalin", "dose": "75mg BD"}
+    ],
+    "allergy": "NKDA",
+    "labs": {
+      "HbA1c": 9.2,
+      "Cr": 1.8,
+      "eGFR": 32,
+      "K": 4.9,
+      "Urine ACR": 380
+    },
+    "vitals": {},
+    "insurance": {
+      "provider": "New India Assurance",
+      "coverage": "₹3L cap, mostly exhausted"
+    },
+    "income": null,
+    "notes": "Insulin transition with CKD and high hypoglycemia risk"
+  },
+  {
+    "patient_code": "PATIENT_3",
+    "case_label": "Auto-Driver",
+    "age": 34,
+    "sex": "Male",
+    "bmi": 35.3,
+    "conditions": ["T2DM", "Obesity", "NAFLD"],
+    "medications": [
+      {"name": "Metformin", "dose": "500mg BD"}
+    ],
+    "allergy": "NKDA",
+    "labs": {
+      "HbA1c": 8.8,
+      "FBS": 186,
+      "ALT": 68,
+      "Cr": 0.8,
+      "eGFR": 108,
+      "TG": 320,
+      "HDL": 32
+    },
+    "vitals": {},
+    "insurance": {
+      "provider": "None",
+      "coverage": "No insurance"
+    },
+    "income": "Daily wage ₹800-1000",
+    "notes": "Cost-sensitive newly diagnosed diabetic with obesity and NAFLD"
+  },
+  {
+    "patient_code": "PATIENT_4",
+    "case_label": "Acute STEMI",
+    "age": 52,
+    "sex": "Male",
+    "bmi": 26.8,
+    "conditions": ["Acute STEMI", "Smoker"],
+    "medications": [],
+    "allergy": "Penicillin (anaphylaxis)",
+    "labs": {
+      "Troponin": 12.4,
+      "Cr": 1.0,
+      "eGFR": 84,
+      "K": 4.2,
+      "Glucose": 142
+    },
+    "vitals": {
+      "HR": 108,
+      "BP": "95/62",
+      "SpO2": 93,
+      "RR": 24
+    },
+    "insurance": {
+      "provider": "ESI",
+      "coverage": "Emergency covered"
+    },
+    "income": null,
+    "notes": "Anterior STEMI with penicillin allergy and emergency cath lab availability"
+  },
+  {
+    "patient_code": "PATIENT_5",
+    "case_label": "Post-MI + New AF",
+    "age": 66,
+    "sex": "Male",
+    "bmi": 28.4,
+    "conditions": ["Post-MI", "AF", "T2DM", "HTN"],
+    "medications": [
+      {"name": "Aspirin", "dose": "75mg"},
+      {"name": "Ticagrelor", "dose": "90mg BD"},
+      {"name": "Atorvastatin", "dose": "80mg HS"},
+      {"name": "Ramipril", "dose": "5mg OD"},
+      {"name": "Metoprolol", "dose": "25mg BD"},
+      {"name": "Metformin", "dose": "1g BD"}
+    ],
+    "allergy": "NKDA",
+    "labs": {
+      "HbA1c": 7.4,
+      "Cr": 1.1,
+      "eGFR": 68,
+      "K": 4.4
+    },
+    "vitals": {
+      "HR": 88,
+      "BP": "128/78"
+    },
+    "insurance": {
+      "provider": "CGHS",
+      "coverage": "Covers most drugs"
+    },
+    "income": null,
+    "notes": "Triple therapy decision after STEMI with new atrial fibrillation"
+  },
+  {
+    "patient_code": "PATIENT_6",
+    "case_label": "Diabetes + Heart Failure",
+    "age": 58,
+    "sex": "Female",
+    "bmi": 30.2,
+    "conditions": ["T2DM", "Heart Failure", "HTN", "CKD 3a"],
+    "medications": [
+      {"name": "Metformin", "dose": "500mg BD"},
+      {"name": "Glimepiride", "dose": "1mg OD"},
+      {"name": "Ramipril", "dose": "10mg OD"},
+      {"name": "Carvedilol", "dose": "12.5mg BD"},
+      {"name": "Furosemide", "dose": "40mg BD"},
+      {"name": "Spironolactone", "dose": "25mg OD"},
+      {"name": "Atorvastatin", "dose": "40mg HS"}
+    ],
+    "allergy": "NKDA",
+    "labs": {
+      "HbA1c": 8.6,
+      "Cr": 1.4,
+      "eGFR": 48,
+      "K": 5.1,
+      "BNP": 850,
+      "Na": 134
+    },
+    "vitals": {
+      "HR": 72,
+      "BP": "110/68",
+      "SpO2": 94
+    },
+    "insurance": {
+      "provider": "Star Health",
+      "coverage": "₹5K/month cap"
+    },
+    "income": null,
+    "notes": "Overlap patient with diabetes, HF, CKD, and hyperkalemia risk"
+  }
+]

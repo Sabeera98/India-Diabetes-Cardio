@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Option C — UI Demo</title>
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--muted:#98a0b3;--accent:#06b6d4;--warn:#f59e0b;--danger:#ef4444;--ok:#10b981}
+    body{font-family:Inter,system-ui,Segoe UI,Arial;margin:0;background:linear-gradient(180deg,#071126 0%, #07182a 100%);color:#e6eef8}
+    .header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,0.03)}
+    .title{font-weight:700;font-size:18px}
+    .container{display:flex;gap:18px;padding:18px;align-items:flex-start}
+    .col{background:rgba(255,255,255,0.03);padding:14px;border-radius:10px;flex:1;min-width:260px}
+    .left{flex:0.9;max-width:320px}
+    .middle{flex:1.8}
+    .right{flex:1}
+    .patient{padding:10px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);margin-bottom:10px;cursor:pointer}
+    .patient .name{font-weight:600}
+    .kv{font-size:13px;color:var(--muted)}
+    .panel{padding:12px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);margin-bottom:12px}
+    .ai-box{height:220px;overflow:auto;background:#071028;border-radius:8px;padding:12px;border:1px solid rgba(255,255,255,0.02)}
+    .label{font-size:12px;color:var(--muted);margin-bottom:8px}
+    .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:12px;margin-right:6px}
+    .alert{padding:10px;border-radius:6px;margin-bottom:8px}
+    .alert.warn{background:linear-gradient(90deg, rgba(245,158,11,0.12), rgba(245,158,11,0.04));border:1px solid rgba(245,158,11,0.12);color:var(--warn)}
+    .alert.crit{background:linear-gradient(90deg, rgba(239,68,68,0.12), rgba(239,68,68,0.04));border:1px solid rgba(239,68,68,0.12);color:var(--danger)}
+    .price{font-weight:700;color:#fff}
+    .actions{display:flex;gap:8px}
+    button{background:var(--accent);color:#042027;border:0;padding:8px 12px;border-radius:8px;font-weight:600;cursor:pointer}
+    .small{font-size:13px;padding:6px 8px}
+    .diff{background:rgba(16,185,129,0.06);border-left:4px solid rgba(16,185,129,0.18);padding:8px;margin-top:8px}
+    footer{padding:12px;text-align:center;color:var(--muted);font-size:13px}
+    @media(max-width:900px){.container{flex-direction:column}.left,.right,.middle{max-width:none}}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">Doctor BRAHMO — Option C UI Demo</div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <div class="kv">Apollo Chennai • Demo mode</div>
+      <div class="actions"><button class="small">Run Option C</button><button class="small" style="background:transparent;border:1px solid rgba(255,255,255,0.04)">Export</button></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col left">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div class="label">Patients</div>
+        <div class="kv">Filter: <span class="badge">All</span><span class="badge">Diabetes</span><span class="badge">Cardiac</span></div>
+      </div>
+      <div class="patient">
+        <div class="name">48M — Failing Metformin</div>
+        <div class="kv">HbA1c 8.4% • BMI 31 • ₹ cap 5K</div>
+      </div>
+      <div class="patient">
+        <div class="name">62F — CKD + High A1c</div>
+        <div class="kv">HbA1c 9.2% • eGFR 32 • Insured</div>
+      </div>
+      <div class="patient">
+        <div class="name">34M — Auto-driver (low income)</div>
+        <div class="kv">New T2DM • HbA1c 8.8% • No insurance</div>
+      </div>
+      <div class="patient">
+        <div class="name">52M — Acute STEMI</div>
+        <div class="kv">STEMI V1–V4 • BP 95/62 • Penicillin anaphylaxis</div>
+      </div>
+      <div class="patient">
+        <div class="name">66M — Post-MI + AF</div>
+        <div class="kv">On Ticagrelor • Needs anticoagulation decision</div>
+      </div>
+      <div class="patient">
+        <div class="name">58F — T2DM + HF</div>
+        <div class="kv">EF 30% • K+ 5.1 • eGFR 48</div>
+      </div>
+    </div>
+
+    <div class="col middle">
+      <div class="panel">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div class="label">Response Comparison</div>
+          <div class="kv">Scenario: <strong>48M — Which second-line?</strong></div>
+        </div>
+        <div style="display:flex;gap:12px;margin-top:12px">
+          <div style="flex:1">
+            <div class="label">Generic AI</div>
+            <div class="ai-box">
+              <strong>Recommendation:</strong>
+              <p>Consider adding a DPP4 inhibitor or SGLT2 inhibitor. Follow ADA guidance for second-line agents.</p>
+              <p class="kv">No local brands or prices provided.</p>
+            </div>
+          </div>
+          <div style="flex:1">
+            <div class="label">India Option C</div>
+            <div class="ai-box">
+              <strong>Recommendation:</strong>
+              <p>Per RSSDI: consider Teneligliptin (Tenepa® 20mg, MRP ₹210/month) or Empagliflozin (Jardiance® generic ~₹520/month). Factor insurance cap ₹5,000—prefer Teneligliptin if cost-limited. Sulfonylurea avoided due to allergy.</p>
+              <div class="diff">Cites: RSSDI 2023; Brands/prices verified on 1mg (snapshot)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="label">Prompt Composer (preview)</div>
+        <div style="margin-top:8px" class="kv">Template: Pull RSSDI nodes + local hospital formulary; include cost constraints and allergy flags.</div>
+      </div>
+
+    </div>
+
+    <div class="col right">
+      <div class="panel">
+        <div class="label">Priority Safety Alerts</div>
+        <div class="alert warn">eGFR: 92 — renal dosing OK (monitor)</div>
+        <div class="alert crit">Allergy: Sulfonamide — avoid sulfonylureas</div>
+        <div class="alert" style="background:linear-gradient(90deg, rgba(16,185,129,0.06), transparent);border:1px solid rgba(16,185,129,0.06);color:var(--ok)">Formulary: Teneligliptin in stock</div>
+      </div>
+
+      <div class="panel">
+        <div class="label">Formulary & Prices (Apollo Chennai)</div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px"><div>Teneligliptin 20mg (Tenepa®)</div><div class="price">₹210/mo</div></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px"><div>Empagliflozin 10mg (generic)</div><div class="price">₹520/mo</div></div>
+        <div style="display:flex;justify-content:space-between"><div>Metformin 500mg</div><div class="price">₹40/mo</div></div>
+      </div>
+
+      <div class="panel">
+        <div class="label">Hospital Contacts</div>
+        <div class="kv">Diabetes Educator: Sister Lakshmi ext 3345</div>
+        <div class="kv">Nephrology: Dr. Ramachandran ext 4420</div>
+        <div class="kv">Cath lab: Dr. Venkat ext 4455</div>
+      </div>
+    </div>
+  </div>
+  <footer>Demo UI — static mock. Ask to convert to Next.js page or interactive React components.</footer>
+</body>
+</html>
