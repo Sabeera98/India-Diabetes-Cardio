@@ -55,35 +55,37 @@ The system is designed specifically for Indian clinical practice context, priori
 ## 4. Drug Pricing & Essential Medicines
 
 ### NLEM (National List of Essential Medicines 2022)
-
-- Source:
-  Central Drugs Standard Control Organization (CDSCO)  
-  Directorate General of Health Services (DGHS)  
-  Ministry of Health & Family Welfare (India)
-
-- Document:
+-Source:
+  -Central Drugs Standard Control Organization (CDSCO)
+  -Directorate General of Health Services (DGHS)
+  -Ministry of Health & Family Welfare (India)
+-Document:
   National List of Essential Medicines (NLEM 2022)
-
-- Used for:
-  - Drug affordability logic in Indian healthcare system
-  - Cost-based prescription recommendations (₹ optimization)
-  - Identification of essential medicines in India
-  - Generic substitution and rational prescribing
-
-- Key Principles:
-  NLEM 2022 includes medicines based on:
-  - Efficacy
-  - Safety
-  - Cost-effectiveness
-  - Public health importance in India
-
-- System Usage:
-  - Prefer NLEM-listed drugs when multiple options exist
-  - Flag high-cost non-essential alternatives
-  - Guide real-world Indian prescribing decisions
-
-- Official Sources:
-  https://cdsco.gov.in
+-Purpose:
+  -To define a list of essential medicines required to meet the priority healthcare needs of the population of India.
+-Key Objectives:
+  -Promote rational use of medicines
+  -Improve accessibility of essential drugs
+  -Support affordability in healthcare delivery
+  -Guide national procurement and treatment standards
+-Key Principles for Inclusion:
+  Medicines in NLEM 2022 are selected based on:
+    -Efficacy
+    -Safety
+    -Clinical effectiveness
+    -Public health relevance in India
+    -Cost-effectiveness (considered indirectly during selection)
+-System Usage (in this project):
+  -Prefer NLEM-listed medicines when multiple therapeutic options exist
+  -Support rational prescribing aligned with Indian healthcare system
+  -Flag non-essential or high-cost alternatives where appropriate
+  -Enable cost-aware clinical decision support logic
+-Important Clarification:
+  -NLEM does NOT directly define drug prices
+  -Drug price regulation is implemented separately under DPCO 2013 by NPPA
+  -NLEM drugs are eligible for government price ceiling control
+Official Reference:
+https://cdsco.gov.in
 
 ---
 
